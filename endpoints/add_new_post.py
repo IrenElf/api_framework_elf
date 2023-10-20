@@ -38,10 +38,3 @@ class CreateNewPost:
 
     def check_responce_status_is_ok(self):
         return self.status == 200
-
-    def delete_created_post(self, post_id):
-        url = "https://jsonplaceholder.typicode.com/posts/" + post_id
-        payload = {}
-        headers = {}
-        response = requests.request("DELETE", url, headers=headers, data=payload)
-        return response
